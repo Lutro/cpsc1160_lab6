@@ -7,6 +7,7 @@
 using namespace std;
 
 void display (Node<Employee> *, string[]);
+void displayMenu();
 const int H_SIZE = 6;
 
 int main() 
@@ -20,8 +21,23 @@ int main()
 
     SortUtil su;
     su.mergeSort(&head);
+    int option;
     
-    display(head,header);
+    while (cin && option != 2)
+    {
+        displayMenu();
+        cin >> option;
+        switch (option) 
+        {
+            // display all employees
+            case 1: 
+                display(head,header);
+                break;
+            case 2:
+            // exit
+                return 0;
+         }
+    }
     
     return 0;
 }
@@ -50,3 +66,9 @@ void display (Node<Employee> * n, string header[]) {
     cout << endl;
 } 
 
+void displayMenu()
+{
+     cout << "1. Display All\n" 
+         << "2. Exit"
+         << endl;
+}
