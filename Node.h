@@ -9,7 +9,6 @@ class Node {
 
     public: 
         Node *next;
-        Node *prev;
         
         Node() {
             next = nullptr;
