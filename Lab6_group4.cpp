@@ -23,19 +23,14 @@ int main()
     su.quickSort(head);
     
     display(head,header);
-    
-    cout << "head's address after push: " << &head << endl;
-    
-    // cout << head->popData() << endl;
-    display(head,header);
-    
+
     
     return 0;
 }
 
 void display (Node * n, string header[]) {
     cout << "\nPrinting the data..." << endl;
-    Person p;
+    Employee p;
     
     for (int x = 0 ; x < H_SIZE ; x++)
     {
@@ -44,7 +39,7 @@ void display (Node * n, string header[]) {
     cout << endl;
     while (n != nullptr) {
         p = n->p;
-        cout << setw(15) << p.id << setw(15) << p.firstname << setw(15) << p.balance << endl;;
+        cout << p << endl;;
         n = n->next;
     }
     cout << endl;
