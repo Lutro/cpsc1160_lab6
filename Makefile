@@ -1,4 +1,4 @@
-OBJS = Lab6_group4.o Employee.o 
+OBJS = Lab6_group4.o Employee.o Node.o FileUtil.o
 # FileUtil.o Node.o SortUtil.o
 
 TestOut: $(OBJS)
@@ -6,14 +6,14 @@ TestOut: $(OBJS)
 	rm -f $(OBJS)
 	
 
-# Node.o:
-# 	g++ -c Node.cpp
+Node.o:
+	g++ -c Node.cpp
 
 # SortUtil.o:
 # 	g++ -c Util/SortUtil.cpp	
 	
-# FileUtil.o:
-# 	g++ -c Util/FileUtil.cpp
+FileUtil.o:
+	g++ -c Util/FileUtil.cpp
 
 Employee.o:
 	g++ -c Employee.cpp

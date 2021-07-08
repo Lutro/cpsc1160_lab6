@@ -11,8 +11,8 @@ const int H_SIZE = 6;
 
 int main() 
 {
-    // Node *head = nullptr;
-    // string header[H_SIZE];
+    Node<Employee> *head = nullptr;
+    string header[H_SIZE];
     
     // CSVReader reader = CSVReader("Employee_Data.csv");
     // reader.readFile(&head, header, H_SIZE);
@@ -24,8 +24,8 @@ int main()
     
     // display(head,header);
     
-    Employee e = Employee();
-    cout << e << endl;
+    // Employee e = Employee();
+    // cout << e << endl;
 
     
     return 0;

@@ -18,7 +18,7 @@ class CSVReader
     CSVReader(string fileName, string delm = ",");
     // CSVReader(string, string);
     
-    void readFile(Node** head_ref, string header[], int header_size);
+    void readFile(Node<Employee>** head_ref, string header[], int header_size);
 };
 
 
