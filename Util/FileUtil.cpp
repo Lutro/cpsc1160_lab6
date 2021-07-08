@@ -46,7 +46,7 @@ CSVReader::CSVReader(string fileName, string delm) : fileName(fileName), delimet
     
 // }
 
-void CSVReader::readFile(Node<Employee>** head_ref, string header[], int header_size)
+void CSVReader::readFile(Node<Employee> ** head_ref, string header[], int header_size)
 {
     ifstream file;
     file.open(this->fileName);
@@ -65,7 +65,7 @@ void CSVReader::readFile(Node<Employee>** head_ref, string header[], int header_
     Employee p;
     while (getline(file,line))
     {
-
+       
         pos = line.find(",");
         p.id = stoi(line.substr(0,pos));
         line.erase(0, pos+1);
@@ -73,7 +73,7 @@ void CSVReader::readFile(Node<Employee>** head_ref, string header[], int header_
         p.firstname = line.substr(0,pos);
         line.erase(0, pos+1);
         pos = line.find(",");
-        p.lastname = stod(line.substr(pos+1));
+        p.lastname = line.substr(0, pos);
         line.erase(0, pos+1);
         pos = line.find(",");
         p.gender =line.substr(0,pos);
@@ -81,6 +81,7 @@ void CSVReader::readFile(Node<Employee>** head_ref, string header[], int header_
         pos = line.find(",");
         p.department=line.substr(0,pos);
         p.salary=line.substr(pos+1);
+        
         (*head_ref)->pushData(head_ref,p);
     }
 

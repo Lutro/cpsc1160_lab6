@@ -19,8 +19,8 @@ class Node {
             next = nullptr;
         }
         
-        void pushData(Node **, T data);
-        T popData();
+        void pushData(Node<T>** node, T data);
+    
         
         T getElement() const {
             return p;
@@ -30,5 +30,13 @@ class Node {
         T p;
         
 };
+
+template <typename T> void Node<T>::pushData(Node<T> ** head_ref, T data)
+{
+    //create a new node with the new element
+    Node<T> * new_node = new Node<T>(data);
+    new_node->next = ( * head_ref);
+    ( * head_ref) = new_node;
+}
 
 #endif

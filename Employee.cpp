@@ -25,10 +25,10 @@ bool Employee::operator<= (const Employee& r) const
 ostream &operator<<(ostream &output, const Employee &P)
 {
     output
-            << setw(15) << P.id
-            << setw(15) << P.firstname
-            << setw(15) << P.lastname
-            << setw(15) << P.gender
-            << setw(15) << P.department
-            << setw(15) << P.salary << endl;
+            << setw(25) << P.id
+            << setw(25) << P.firstname
+            << setw(25) << P.lastname
+            << setw(25) << P.gender
+            << setw(25) << P.department
+            << setw(25) << P.salary << endl;
 }
