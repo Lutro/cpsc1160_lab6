@@ -28,7 +28,7 @@ void CSVReader::readFile(Node** head_ref, string header[], int header_size)
         line.erase(0, pos+1);
     }
     
-    T p;
+    Employee p;
     while (getline(file,line))
     {
        

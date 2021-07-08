@@ -18,7 +18,7 @@ class Employee {
         string lastname;
         string gender;
         string department;
-        double salary;
+        string salary;
 };
 
 #endif
